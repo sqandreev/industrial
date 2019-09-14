@@ -3,7 +3,7 @@
  */
 
 @font-face {
-  font-family: "HK Grotesk";
+  font-family: "HK Grotesk Light";
   src: url("../fonts/hk-grotesk/hk-grotesk-light.woff2") format("woff2"),
       url("../fonts/hk-grotesk/hk-grotesk-light.woff") format("woff");
   font-weight: 300;
@@ -11,7 +11,7 @@
 }
 
 @font-face {
-  font-family: "League Spartan";
+  font-family: "League Spartan Bold";
   src: url("../fonts/league-spartan/leagua-spartan-bold.woff2") format("woff2"),
       url("../fonts/league-spartan/leagua-spartan-bold.woff") format("woff");
   font-weight: bold;
@@ -28,17 +28,29 @@
   grid-column-gap: 40px;
   margin-top: 60px;
   margin-right: auto;
-  margin-bottom: 0;
+  margin-bottom: 70px;
   margin-left: auto;
   width: 1160px;
 
-  font-family: "HK Grotesk", sans-serif;
+  font-family: "HK Grotesk Light", sans-serif;
 
   background-color: #272f45;
 }
 
 .page__header {
   margin-bottom: 55px;
+}
+
+.page__product {
+  margin-top: 0;
+  margin-right: 0;
+  margin-bottom: 40px;
+  margin-left: 0;
+}
+
+.page__newsletter {
+  padding-top: 120px;
+  padding-bottom: 90px;
 }
 
 /**
@@ -59,7 +71,7 @@
   height: 42px;
 
   font-size: 24px;
-  font-family: "HK Grotesk", sans-serif;
+  font-family: "HK Grotesk Light", sans-serif;
   color: #92a1a9;
 
   border: none;
@@ -77,25 +89,25 @@
 
 .header__search::-webkit-input-placeholder { /* Chrome/Opera/Safari */
   font-size: 24px;
-  font-family: "HK Grotesk", sans-serif;
+  font-family: "HK Grotesk Light", sans-serif;
   color: #92a1a9;
 }
 
 .header__search::-moz-placeholder { /* Firefox 19+ */
   font-size: 24px;
-  font-family: "HK Grotesk", sans-serif;
+  font-family: "HK Grotesk Light", sans-serif;
   color: #92a1a9;
 }
 
 .header__search:-ms-input-placeholder { /* IE 10+ */
   font-size: 24px;
-  font-family: "HK Grotesk", sans-serif;
+  font-family: "HK Grotesk Light", sans-serif;
   color: #92a1a9;
 }
 
 .header__search:-moz-placeholder { /* Firefox 18- */
   font-size: 24px;
-  font-family: "HK Grotesk", sans-serif;
+  font-family: "HK Grotesk Light", sans-serif;
   color: #92a1a9;
 }
 
@@ -104,31 +116,213 @@
  */
 
 .product {
-  margin: 0;
+  position: relative;
 }
 
 .product--gina {
   grid-column: span 6;
+  height: 690px;
+
+  background-color: #aebbc0;
+  overflow: hidden;
 }
 
 .product--beoplay-a1 {
   grid-column: span 3;
+  height: 520px;
+
+  background-color: #60b8a3;
+  overflow: hidden;
 }
 
 .product--leica-mp {
   grid-column: span 3;
+  height: 520px;
+
+  background-color: #7778c6;
+  overflow: hidden;
 }
 
 .product--molekule {
   grid-column: span 2;
+  height: 440px;
+
+  background-color: #e97864;
+  overflow: hidden;
 }
 
 .product--p9-signature {
   grid-column: span 2;
+  height: 440px;
+
+  background-color: #557581;
+  overflow: hidden;
 }
 
 .product--dr {
   grid-column: span 2;
+  height: 440px;
+
+  background-color: #82c9d8;
+  overflow: hidden;
+}
+
+.product__image {
+  position: absolute;
+
+  vertical-align: top;
+}
+
+.product__image--beoplay-a1 {
+  bottom: 0;
+  left: 0;
+}
+
+.product__image--leica-mp {
+  right: 0;
+  bottom: 0;
+}
+
+.product__image--molekule {
+  bottom: 0;
+  left: 50%;
+
+  transform: translateX(-50%);
+}
+
+.product__image--p9-signature {
+  top: 0;
+  left: 50%;
+
+  transform: translateX(-50%);
+}
+
+.product__image--dr {
+  bottom: 0;
+  left: 50%;
+
+  transform: translateX(-50%);
+}
+
+.product__figcaption {
+  position: absolute;
+  top: 69px;
+  right: 25px;
+  bottom: 37px;
+  left: 25px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.product__figcaption--large {
+  top: 112px;
+  right: 60px;
+  bottom: 118px;
+  left: 60px;
+
+  align-items: flex-start;
+}
+
+.product__figcaption--medium {
+  top: 63px;
+  right: 30px;
+  bottom: 221px;
+  left: 30px;
+
+  align-items: flex-start;
+}
+
+.product__figcaption--reverse {
+  align-items: flex-end;
+}
+
+.product__figcaption--signature {
+  justify-content: flex-end;
+}
+
+.product__title {
+  margin-top: 0;
+  margin-bottom: 20px;
+
+  font-family: "Legua Spartan Bold", sans-serif;
+  font-size: 36px;
+  line-height: 42px;
+  color: #ffffff;
+  text-transform: uppercase;
+}
+
+.product__title--medium {
+  margin-bottom: 28px;
+
+  font-size: 48px;
+}
+
+.product__title--large {
+  margin-bottom: 50px;
+
+  font-size: 80px;
+}
+
+.product__description {
+  margin-top: 0;
+  margin-bottom: 5px;
+
+  font-size: 16px;
+  color: #ffffff;
+}
+
+.product__description--medium {
+  margin-top: 0;
+  margin-bottom: auto;
+  font-size: 24px;
+}
+
+.product__description--large {
+  margin-bottom: auto;
+  width: 360px;
+
+  font-size: 32px;
+}
+
+.product__description--beoplay-a1 {
+  text-align: right;
+}
+
+.product__button {
+  display: inline-block;
+  padding: 10px 16px;
+
+  color: #ffffff;
+  font-size: 18px;
+  font-family: "Legua Spartan Bold", sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  text-decoration: none;
+
+  border: 3px solid #eec9a2;
+
+  transition-property: background-color, color;
+  transition-duration: 0.75s;
+}
+
+.product__button--medium {
+  padding: 14px 37px;
+}
+
+.product__button--large {
+  padding: 17px 24px;
+
+  font-family: "HK Grotesk Light", sans-serif;
+  font-size: 24px;
+  text-transform: capitalize;
+}
+
+.product__button:hover {
+  color: #000000;
+
+  background-color: #eec9a2;
 }
 
 /**
@@ -137,23 +331,20 @@
 
 .newsletter {
   grid-column: span 6;
-}
-
-.content {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-bottom: 103px;
 }
 
-.content h4 {
+.newsletter__title {
   margin-top: 0;
   margin-bottom: 29px;
+
   font-size: 36px;
   color: #92a1a9;
 }
 
-.content p {
+.newsletter__description {
   width: 986px;
   text-align: center;
   margin-top: 0;
@@ -162,12 +353,12 @@
   color: #798a95;
 }
 
-.content form {
+.newsletter__form {
   margin-bottom: 20px;
   width: 360px;
 }
 
-.email-address {
+.newsletter__input {
   background-color: transparent;
   border: 3px solid #63757e;
   padding: 19px 0;
@@ -176,36 +367,36 @@
   color: #92a1a9;
   text-align: center;
   font-size: 24px;
-  font-family: "HK Grotesk";
+  font-family: "HK Grotesk Light";
   box-sizing: border-box;
   margin-bottom: 20px;
 }
 
-.email-address::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+.newsletter__input::-webkit-input-placeholder { /* Chrome/Opera/Safari */
   color: #92a1a9;
   font-size: 24px;
-  font-family: "HK Grotesk";
+  font-family: "HK Grotesk Light";
 }
 
-.email-address::-moz-placeholder { /* Firefox 19+ */
+.newsletter__input::-moz-placeholder { /* Firefox 19+ */
   color: #92a1a9;
   font-size: 24px;
-  font-family: "HK Grotesk";
+  font-family: "HK Grotesk Light";
 }
 
-.email-address:-ms-input-placeholder { /* IE 10+ */
+.newsletter__input:-ms-input-placeholder { /* IE 10+ */
   color: #92a1a9;
   font-size: 24px;
-  font-family: "HK Grotesk";
+  font-family: "HK Grotesk Light";
 }
 
-.email-address:-moz-placeholder { /* Firefox 18- */
+.newsletter__input:-moz-placeholder { /* Firefox 18- */
   color: #92a1a9;
   font-size: 24px;
-  font-family: "HK Grotesk";
+  font-family: "HK Grotesk Light";
 }
 
-.email-subscribe {
+.newsletter__button {
   background-color: transparent;
   border: 3px solid #82c9d8;
   padding: 19px 0;
@@ -214,75 +405,87 @@
   color: #ffffff;
   text-align: center;
   text-transform: uppercase;
+
+  transition-property: background-color;
+  transition-duration: 0.75s;
 }
 
-.email-subscribe:hover {
+.newsletter__button:hover {
   cursor: pointer;
   background-color: #82c9d8;
 }
 
-/* /content */
-
-/* footer */
+/**
+ * footer
+ */
 
 .footer {
   grid-column: span 6;
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-bottom: 70px;
 }
 
-.navigation {
+.footer__navigation {
   display: flex;
-  list-style: none;
   padding-left: 0;
   margin-top: 0;
   margin-bottom: 30px;
+
+  list-style: none;
 }
 
-.navigation li {
+.footer__navigation-item {
   position: relative;
+
   padding-left: 21px;
   padding-right: 21px;
 }
 
-.navigation li::after {
+.footer__navigation-item::after {
   content: "";
+
   position: absolute;
   top: 50%;
   right: 0;
+
   width: 7px;
   height: 7px;
+
   background-color: #92a1a9;
   border-radius: 50%;
+  
   transform: translateY(-50%);
 }
 
-.navigation li:first-child {
+.footer__navigation-item:first-child {
   padding-left: 0;
 }
 
-.navigation li:last-child {
+.footer__navigation-item:last-child {
   padding-right: 0;
 }
 
-.navigation li:last-child::after {
+.footer__navigation-item:last-child::after {
   content: none;
 }
 
-.navigation a {
+.footer__navigation-link {
   text-decoration: none;
   font-size: 24px;
   color: #75838e;
+
+  transition-property: color;
+  transition-duration: 0.75s;
 }
 
-.navigation a:hover {
+.footer__navigation-link:hover {
   color: #ffffff;
 }
 
-.copyright {
+.footer__copyright {
   margin: 0;
+  
   font-size: 18px;
   color: #7f919b;
 }
